@@ -1,0 +1,78 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: #fff; }
+h1, h2, h3 { font-weight: 700; }
+
+
+.hero-image img,
+.doc-image img,
+.comm-image img,
+.card img,
+.corona img {
+  max-width: 100%;
+  border-radius: 12px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-image img:hover,
+.doc-image img:hover,
+.comm-image img:hover,
+.card img:hover,
+.corona img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+html { scroll-behavior: smooth; }
+
+
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 10%; background: #f7f8fa; }
+.hero h1 { font-size: 50px; line-height: 1.2; }
+.hero h1 span { color: #ff5959; }
+.hero p { margin: 20px 0; font-size: 16px; color: #555; }
+.hero .btn { display: inline-block; padding: 14px 28px; background: #ff5959; color: #fff; border-radius: 6px; text-decoration: none; margin-top: 10px; font-weight: 600; }
+.hero-image img { max-width: 420px; }
+.scroll { margin-top: 20px; font-size: 14px; color: #666; }
+
+
+.mvgoals { padding: 80px 10%; text-align: center; }
+.mvgoals h2 { font-size: 36px; }
+.mvgoals h2 span { color: #ff5959; }
+.cards { display: flex; gap: 30px; margin-top: 50px; flex-wrap: wrap; justify-content: center; }
+.card { background: #f9f9f9; padding: 30px 20px; border-radius: 12px; flex: 1; min-width: 250px; text-align: center; }
+.card img { width: 100px; margin-bottom: 20px; }
+.card h3 { margin-bottom: 12px; font-size: 22px; }
+
+
+.doc, .community { display: flex; align-items: center; padding: 80px 10%; gap: 50px; flex-wrap: wrap; }
+.doc-text, .comm-text, .doc-image, .comm-image { flex: 1; min-width: 300px; }
+.doc h2, .community h2 { font-size: 36px; }
+.doc h2 span, .community h2 span { color: #ff5959; }
+.doc p, .community p { margin: 20px 0; color: #555; }
+.doc .btn, .community .btn { margin-top: 20px; }
+
+
+.corona { text-align: center; padding: 80px 10%; background: #f7f8fa; }
+.corona h2 { font-size: 36px; }
+.corona h2 span { color: #ff5959; }
+.corona p { margin: 20px auto; max-width: 600px; color: #555; }
+.corona img { margin-top: 30px; max-width: 420px; }
+.corona .features { margin-top: 40px; }
+.corona .features h3 { font-size: 24px; margin-bottom: 15px; color: #ff5959; }
+.corona .features p { color: #555; font-size: 16px; }
+
+
+footer { text-align: center; padding: 25px; background: #111; color: #fff; font-size: 14px; }
+
+
+@media (max-width: 900px) {
+  .hero, .doc, .community { flex-direction: column; text-align: center; }
+  .hero-image img, .doc-image img, .comm-image img { margin-top: 30px; }
+}
